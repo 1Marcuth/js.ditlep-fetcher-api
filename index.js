@@ -1,9 +1,12 @@
 import axios from "axios"
 import express from "express"
 import crypto from "crypto-js"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const app = express()
-const port = 5001
+const port = process.env.PORT || 5001
 
 function decryptData(encryptedData) {
     try {
